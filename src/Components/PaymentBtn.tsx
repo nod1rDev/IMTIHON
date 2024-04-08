@@ -12,11 +12,11 @@ function PaymentBtn({
       className={`${paid ? " bg-[#33D69F] text-[#33D69F]  " : ""} ${
         pinding ? "bg-[#FF8F00] text-[#FF8F00]" : ""
       } ${
-        draft ? "bg-[#373B53] text-[#373B53]" : ""
+        draft ? "bg-[#373B53] text-[#373B53] dark:text-[#DFE3FA]" : ""
       } w-[104px] flex gap-2  items-center rounded-md bg-opacity-[0.2] h-[40px] font-bold text-[15px] leading-[15px] tracking-[-0.25px] justify-center`}
     >
       <img
-      className="mb-1"
+        className="mb-1"
         width={8}
         height={8}
         src={
