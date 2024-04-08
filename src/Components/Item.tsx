@@ -9,7 +9,7 @@ function Item({
   onclick,
   price,
   priceN,
-  total,
+
   del,
   id,
 }: {
@@ -18,7 +18,7 @@ function Item({
   qty?: any;
   id?: any;
   del?: any;
-  total?: string;
+
   price?: any;
   qtyName?: string;
   onchange?: any;

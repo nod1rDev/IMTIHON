@@ -11,29 +11,28 @@ function InputOrg({
   namee,
   month,
   desabled,
-  date,
+
   defaultValuee,
   phone,
   nodirbek,
-  nimadur,
 }: {
   label?: string;
   defaultValuee?: any;
   def?: string;
-  nimadur?: boolean;
+
   valuee?: any;
   oncahnege?: any;
   size?: string;
   namee: string;
   month?: boolean;
-  date?: string;
+
   desabled?: boolean;
   phone?: boolean;
   nodirbek?: boolean;
 }) {
   const theme = useSelector((state: any) => state.invoice.them);
   const [defaul, setdefoult] = useState(def ? def : "complate..");
-  
+
   const chanegee = (e: React.ChangeEvent<HTMLInputElement>) => {
     oncahnege(e);
     setdefoult(e.target.value);
@@ -47,7 +46,6 @@ function InputOrg({
       {theme == "light" ? (
         <TextField
           id="outlined-basic"
-        
           disabled={desabled}
           name={namee}
           defaultValue={defaultValuee}
@@ -77,7 +75,6 @@ function InputOrg({
       ) : (
         <TextField
           value={!defaul ? valuee : null}
-        
           name={namee}
           defaultValue={defaultValuee}
           disabled={desabled}

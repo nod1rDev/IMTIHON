@@ -11,7 +11,7 @@ import { DB } from "../Firebase/firebase";
 import { useChosePrahe } from "../Hooks/useChoosePrehe";
 import { useDate } from "../Hooks/useDate";
 import Alertt from "./Alert";
-import { useNavigate } from "react-router-dom";
+
 
 //select options
 const SelectOptions = [
@@ -58,13 +58,13 @@ export default function UpdateForm() {
   //total Price
   const [totalPrice, setTotalPrice] = useState<number>(0);
   const [DATA, setDATA] = useState<any>("");
-  const updatee = useSelector((state: any) => state.invoice.upDate);
+
   const currentItem = useSelector((state: any) => state.invoice.currentItem);
-  const [nimadur, setNimadur] = useState<boolean>(false);
+
   useEffect(() => {
     setDATA(currentItem);
   }, []);
-  const navigate = useNavigate();
+
 
   // SubmitForm
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -337,7 +337,7 @@ export default function UpdateForm() {
                   oncahnege={handleChanege}
                   label="Street Address"
                   size="100%"
-                  nimadur={nimadur}
+                 
                   defaultValuee={DATA ? DATA.fromAddress : "19 Union Terrace"}
                 />
                 <div className="flex gap-6 mb-4 max-w-full">
@@ -543,19 +543,7 @@ export default function UpdateForm() {
                                   setItemPrice(e.target.value)
                               : null
                           }
-                          total={
-                            e.id == 1
-                              ? e.itemTotal1
-                              : e.id == 2
-                              ? e.itemTotal2
-                              : e.id == 3
-                              ? e.itemTotal3
-                              : e.id == 4
-                              ? e.itemTotal4
-                              : e.id == 5
-                              ? e.itemTotal5
-                              : 0
-                          }
+                          
                           itemN={
                             i == 0 && e.itemNamee1 !== ""
                               ? e.itemNamee1
@@ -628,19 +616,7 @@ export default function UpdateForm() {
                                   setItemPrice(e.target.value)
                               : null
                           }
-                          total={
-                            e.id == 1
-                              ? e.itemTotal1
-                              : e.id == 2
-                              ? e.itemTotal2
-                              : e.id == 3
-                              ? e.itemTotal3
-                              : e.id == 4
-                              ? e.itemTotal4
-                              : e.id == 5
-                              ? e.itemTotal5
-                              : 0
-                          }
+                         
                           itemN={
                             i == 0 && e.itemNamee1 !== ""
                               ? e.itemNamee1

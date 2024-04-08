@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { formClose, formShow } from "../Modal/modal";
+import { formClose } from "../Modal/modal";
 import Alert from "@mui/material/Alert";
 import InputOrg from "./InputOrg";
 import Item from "./Item";
@@ -564,19 +564,7 @@ export default function FormList() {
                                   setItemPrice(e.target.value)
                               : null
                           }
-                          total={
-                            e.id == 1
-                              ? e.itemTotal1
-                              : e.id == 2
-                              ? e.itemTotal2
-                              : e.id == 3
-                              ? e.itemTotal3
-                              : e.id == 4
-                              ? e.itemTotal4
-                              : e.id == 5
-                              ? e.itemTotal5
-                              : 0
-                          }
+                        
                           itemN={
                             i == 0 && e.itemNamee1 !== ""
                               ? e.itemNamee1
