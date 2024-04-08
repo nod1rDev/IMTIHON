@@ -10,7 +10,7 @@ import ButtonOrg from "../Components/ButtonOrg";
 import Orderr from "../Components/Orderr";
 import Alert from "@mui/material/Alert";
 import { updateShow } from "../Modal/modal";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addCurrentItem, changeUpdate } from "../Redux/invoice";
 
 function Invoice() {

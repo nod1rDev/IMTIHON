@@ -6,7 +6,7 @@ import Item from "./Item";
 import ButtonOrg from "./ButtonOrg";
 import { useDispatch, useSelector } from "react-redux";
 import { addToItem } from "../Redux/invoice";
-import { ref, set, update } from "firebase/database";
+import { ref,  update } from "firebase/database";
 import { DB } from "../Firebase/firebase";
 import { useChosePrahe } from "../Hooks/useChoosePrehe";
 import { useDate } from "../Hooks/useDate";
