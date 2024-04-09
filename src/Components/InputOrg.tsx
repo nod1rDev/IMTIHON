@@ -47,6 +47,7 @@ function InputOrg({
         <TextField
           id="outlined-basic"
           disabled={desabled}
+          placeholder={defaul}
           name={namee}
           defaultValue={defaultValuee}
           error={!valuee && defaul == "" ? true : false}
@@ -76,6 +77,7 @@ function InputOrg({
         <TextField
           value={!defaul ? valuee : null}
           name={namee}
+          placeholder={defaul}
           defaultValue={defaultValuee}
           disabled={desabled}
           onChange={chanegee}

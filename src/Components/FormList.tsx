@@ -260,9 +260,41 @@ export default function FormList() {
         AllItem: item,
       });
       setSaved(true);
+      setValue({
+        fromAddress: "",
+        fromCity: "",
+        fromPost: "",
+        fromCountry: "",
+        clintName: "",
+        clintEmail: "",
+        clintAddress: "",
+        clintCity: "",
+        clintPost: "",
+        clintCountry: "",
+        Idate: "",
+        IPayment: "",
+        IProject: "",
+      });
+      setItem([])
       formClose();
     } else {
+      setValue({
+        fromAddress: "",
+        fromCity: "",
+        fromPost: "",
+        fromCountry: "",
+        clintName: "",
+        clintEmail: "",
+        clintAddress: "",
+        clintCity: "",
+        clintPost: "",
+        clintCountry: "",
+        Idate: "",
+        IPayment: "",
+        IProject: "",
+      });
       formClose();
+      setItem([])
       setError(true);
     }
   };
@@ -298,9 +330,41 @@ export default function FormList() {
         AllItem: item,
       });
       setSaved(true);
+      setValue({
+        fromAddress: "",
+        fromCity: "",
+        fromPost: "",
+        fromCountry: "",
+        clintName: "",
+        clintEmail: "",
+        clintAddress: "",
+        clintCity: "",
+        clintPost: "",
+        clintCountry: "",
+        Idate: "",
+        IPayment: "",
+        IProject: "",
+      });
+      setItem([])
       formClose();
     } else {
       formClose();
+      setValue({
+        fromAddress: "",
+        fromCity: "",
+        fromPost: "",
+        fromCountry: "",
+        clintName: "",
+        clintEmail: "",
+        clintAddress: "",
+        clintCity: "",
+        clintPost: "",
+        clintCountry: "",
+        Idate: "",
+        IPayment: "",
+        IProject: "",
+      });
+      setItem([])
       setError(true);
     }
   };
@@ -564,7 +628,6 @@ export default function FormList() {
                                   setItemPrice(e.target.value)
                               : null
                           }
-                        
                           itemN={
                             i == 0 && e.itemNamee1 !== ""
                               ? e.itemNamee1
