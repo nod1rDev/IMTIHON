@@ -18,3 +18,12 @@ export const updateClose = () => {
   updateModalEl.close();
 };
 
+export const DeleteShow = () => {
+  const updateModalEl: any = document.getElementById("delete")!;
+  updateModalEl.showModal();
+};
+
+export const DeleteClose = () => {
+  const updateModalEl: any = document.getElementById("delete")!;
+  updateModalEl.close();
+};

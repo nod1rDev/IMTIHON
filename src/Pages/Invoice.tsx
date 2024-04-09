@@ -9,7 +9,7 @@ import Orders from "../Components/Orders";
 import ButtonOrg from "../Components/ButtonOrg";
 import Orderr from "../Components/Orderr";
 import Alert from "@mui/material/Alert";
-import { updateShow } from "../Modal/modal";
+import { DeleteClose, DeleteShow, updateShow } from "../Modal/modal";
 import { useDispatch } from "react-redux";
 import { addCurrentItem, changeUpdate } from "../Redux/invoice";
 
@@ -217,11 +217,7 @@ function Invoice() {
 
         <div className="flex justify-between dark:bg-[#1E2139] -ml-6 shadow-[b0px_10px_10px_-10px_#48549F1A] bg-[#FFFFFF] px-6 py-5  items-center w-[62.57vh]">
           <ButtonOrg onclick={updatee} idet text="Edit" />
-          <ButtonOrg
-            onclick={() => del(item && item.prahe)}
-            del
-            text="Delete"
-          />
+          <ButtonOrg del onclick={DeleteShow} text="Delete" />
           <ButtonOrg
             onclick={() => paid(item && item.prahe)}
             ordinary={true}
@@ -254,7 +250,8 @@ function Invoice() {
             </div>
             <div className="flex gap-3">
               <ButtonOrg onclick={updatee} idet text="Edit" />
-              <ButtonOrg del onclick={() => del(item.prahe)} text="Delete" />
+
+              <ButtonOrg del onclick={DeleteShow} text="Delete" />
               <ButtonOrg
                 onclick={() => paid(item.prahe)}
                 ordinary={true}
@@ -401,6 +398,23 @@ function Invoice() {
           </div>
         </div>
       )}
+      <dialog id="delete" className="modal max-w-[375px]  md:max-w-full ">
+        <div className="modal-box bg-[#FFFFFF] py-9 px-6 md:py-12 md:px-8 dark:bg-[#1E2139]  shadow-[0px_10px_10px_-10px_#48549F1A] text-inherit">
+          <h1 className="font-bold text-[24px] leading-[32px] tracking-[-0.1px] ">
+            Confirm Deletion
+          </h1>
+
+          <p className="font-[500] text-[13px] leading-[22px] tracking-[-0.1px]  md:max-w-[90%] text-[#888EB0] my-6">
+            Are you sure you want to delete invoice #{item && item.prahe}? This
+            action cannot be undone.
+          </p>
+
+          <div className="flex w-full justify-end gap-3">
+            <ButtonOrg idet onclick={DeleteClose} text="Cancel" />
+            <ButtonOrg del onclick={() => del(item.prahe)} text="Delete" />
+          </div>
+        </div>
+      </dialog>
     </>
   );
 }
