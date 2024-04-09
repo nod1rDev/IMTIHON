@@ -260,41 +260,14 @@ export default function FormList() {
         AllItem: item,
       });
       setSaved(true);
-      setValue({
-        fromAddress: "",
-        fromCity: "",
-        fromPost: "",
-        fromCountry: "",
-        clintName: "",
-        clintEmail: "",
-        clintAddress: "",
-        clintCity: "",
-        clintPost: "",
-        clintCountry: "",
-        Idate: "",
-        IPayment: "",
-        IProject: "",
-      });
-      setItem([])
+
+      window.location.reload();
+
+      setItem([]);
       formClose();
     } else {
-      setValue({
-        fromAddress: "",
-        fromCity: "",
-        fromPost: "",
-        fromCountry: "",
-        clintName: "",
-        clintEmail: "",
-        clintAddress: "",
-        clintCity: "",
-        clintPost: "",
-        clintCountry: "",
-        Idate: "",
-        IPayment: "",
-        IProject: "",
-      });
-      formClose();
-      setItem([])
+      window.location.reload();
+      setItem([]);
       setError(true);
     }
   };
@@ -330,43 +303,20 @@ export default function FormList() {
         AllItem: item,
       });
       setSaved(true);
-      setValue({
-        fromAddress: "",
-        fromCity: "",
-        fromPost: "",
-        fromCountry: "",
-        clintName: "",
-        clintEmail: "",
-        clintAddress: "",
-        clintCity: "",
-        clintPost: "",
-        clintCountry: "",
-        Idate: "",
-        IPayment: "",
-        IProject: "",
-      });
-      setItem([])
+      window.location.reload();
+      setItem([]);
       formClose();
     } else {
       formClose();
-      setValue({
-        fromAddress: "",
-        fromCity: "",
-        fromPost: "",
-        fromCountry: "",
-        clintName: "",
-        clintEmail: "",
-        clintAddress: "",
-        clintCity: "",
-        clintPost: "",
-        clintCountry: "",
-        Idate: "",
-        IPayment: "",
-        IProject: "",
-      });
-      setItem([])
+      window.location.reload();
+      setItem([]);
       setError(true);
     }
+  };
+
+  const close = () => {
+    formClose();
+    window.location.reload();
   };
 
   return (
@@ -688,7 +638,7 @@ export default function FormList() {
               </div>
               <div className="flex md:hidden w-[62.6vh] -ml-4 px-4 gap-2 py-5 dark:bg-[#1E2139] items-center bg-[#FFFFFF] mt-9 shad shadow-[0px_10px_10px_-10px_#48549F1A]">
                 <ButtonOrg
-                  onclick={formClose}
+                  onclick={close}
                   type={"button"}
                   text="Discard"
                   idet
@@ -708,7 +658,7 @@ export default function FormList() {
               </div>
               <div className=" hidden md:flex justify-between items-center max-w-full">
                 <ButtonOrg
-                  onclick={formClose}
+                  onclick={close}
                   type={"button"}
                   text="Discard"
                   idet
