@@ -6,12 +6,11 @@ import Item from "./Item";
 import ButtonOrg from "./ButtonOrg";
 import { useDispatch, useSelector } from "react-redux";
 import { addToItem } from "../Redux/invoice";
-import { ref,  update } from "firebase/database";
+import { ref, update } from "firebase/database";
 import { DB } from "../Firebase/firebase";
 import { useChosePrahe } from "../Hooks/useChoosePrehe";
 import { useDate } from "../Hooks/useDate";
 import Alertt from "./Alert";
-
 
 //select options
 const SelectOptions = [
@@ -64,7 +63,6 @@ export default function UpdateForm() {
   useEffect(() => {
     setDATA(currentItem);
   }, []);
-
 
   // SubmitForm
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -269,16 +267,14 @@ export default function UpdateForm() {
         AllItem: item,
       });
       setSaved(true);
-    
+
       updateClose();
     } else {
-    
       updateClose();
       setError(true);
     }
   };
   const canle = () => {
-  
     updateClose();
   };
   return (
@@ -337,7 +333,6 @@ export default function UpdateForm() {
                   oncahnege={handleChanege}
                   label="Street Address"
                   size="100%"
-                 
                   defaultValuee={DATA ? DATA.fromAddress : "19 Union Terrace"}
                 />
                 <div className="flex gap-6 mb-4 max-w-full">
@@ -543,7 +538,6 @@ export default function UpdateForm() {
                                   setItemPrice(e.target.value)
                               : null
                           }
-                          
                           itemN={
                             i == 0 && e.itemNamee1 !== ""
                               ? e.itemNamee1
@@ -616,7 +610,6 @@ export default function UpdateForm() {
                                   setItemPrice(e.target.value)
                               : null
                           }
-                         
                           itemN={
                             i == 0 && e.itemNamee1 !== ""
                               ? e.itemNamee1

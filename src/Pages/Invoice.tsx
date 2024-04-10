@@ -145,64 +145,65 @@ function Invoice() {
 
           <div className="flex flex-col rounded-2xl w-full">
             <div className="bg-[#F9FAFE] dark:bg-[#252945] rounded-t-lg w-full p-6 flex flex-col gap-6">
-              {item &&
-                item.AllItem.map((item: any) => (
-                  <Orders
-                    key={item.id}
-                    orderAmount={
-                      item.id == 1
-                        ? item.itemHow1
-                        : item.id == 2
-                        ? item.itemHow2
-                        : item.id == 3
-                        ? item.itemHow3
-                        : item.id == 4
-                        ? item.itemHow4
-                        : item.id == 5
-                        ? item.itemHow5
-                        : "2"
-                    }
-                    OrderText={
-                      item.id == 1
-                        ? item.itemNamee1
-                        : item.id == 2
-                        ? item.itemNamee2
-                        : item.id == 3
-                        ? item.itemNamee3
-                        : item.id == 4
-                        ? item.itemNamee4
-                        : item.id == 5
-                        ? item.itemNamee5
-                        : " Banner Dsign"
-                    }
-                    orderPrice={
-                      item.id == 1
-                        ? item.itemPrice1
-                        : item.id == 2
-                        ? item.itemPrice2
-                        : item.id == 3
-                        ? item.itemPrice3
-                        : item.id == 4
-                        ? item.itemPrice4
-                        : item.id == 5
-                        ? item.itemPrice5
-                        : "250"
-                    }
-                    orderOverallPrice={
-                      item.id == 1
-                        ? item.itemTotal1
-                        : item.id == 2
-                        ? item.itemTotal2
-                        : item.id == 3
-                        ? item.itemTotal3
-                        : item.id == 4
-                        ? item.itemTotal4
-                        : item.id == 5
-                        ? item.itemTotal5
-                        : "500"
-                    }
-                  />
-                ))}
+              {item && item.AllItem
+                ? item.AllItem.map((item: any) => (
+                    <Orders
+                      key={item.id}
+                      orderAmount={
+                        item.id == 1
+                          ? item.itemHow1
+                          : item.id == 2
+                          ? item.itemHow2
+                          : item.id == 3
+                          ? item.itemHow3
+                          : item.id == 4
+                          ? item.itemHow4
+                          : item.id == 5
+                          ? item.itemHow5
+                          : "2"
+                      }
+                      OrderText={
+                        item.id == 1
+                          ? item.itemNamee1
+                          : item.id == 2
+                          ? item.itemNamee2
+                          : item.id == 3
+                          ? item.itemNamee3
+                          : item.id == 4
+                          ? item.itemNamee4
+                          : item.id == 5
+                          ? item.itemNamee5
+                          : " Banner Dsign"
+                      }
+                      orderPrice={
+                        item.id == 1
+                          ? item.itemPrice1
+                          : item.id == 2
+                          ? item.itemPrice2
+                          : item.id == 3
+                          ? item.itemPrice3
+                          : item.id == 4
+                          ? item.itemPrice4
+                          : item.id == 5
+                          ? item.itemPrice5
+                          : "250"
+                      }
+                      orderOverallPrice={
+                        item.id == 1
+                          ? item.itemTotal1
+                          : item.id == 2
+                          ? item.itemTotal2
+                          : item.id == 3
+                          ? item.itemTotal3
+                          : item.id == 4
+                          ? item.itemTotal4
+                          : item.id == 5
+                          ? item.itemTotal5
+                          : "500"
+                      }
+                    />
+                  ))
+                : ""}
             </div>
             <div className="flex w-full justify-between dark:bg-[#0C0E16] bg-[#373B53] rounded-b-lg py-6 px-6">
               <span className="font-[500] text-[13px] leading-[18px] tracking-[-0.1px] text-[#FFFFFF] ">
@@ -327,64 +328,65 @@ function Invoice() {
                     </span>
                   </div>
                 </div>
-                {item &&
-                  item.AllItem.map((item: any) => (
-                    <Orderr
-                      key={item.id}
-                      orderAmount={
-                        item.id == 1
-                          ? item.itemHow1
-                          : item.id == 2
-                          ? item.itemHow2
-                          : item.id == 3
-                          ? item.itemHow3
-                          : item.id == 4
-                          ? item.itemHow4
-                          : item.id == 5
-                          ? item.itemHow5
-                          : "2"
-                      }
-                      OrderText={
-                        item.id == 1
-                          ? item.itemNamee1
-                          : item.id == 2
-                          ? item.itemNamee2
-                          : item.id == 3
-                          ? item.itemNamee3
-                          : item.id == 4
-                          ? item.itemNamee4
-                          : item.id == 5
-                          ? item.itemNamee5
-                          : " Banner Dsign"
-                      }
-                      orderPrice={
-                        item.id == 1
-                          ? item.itemPrice1
-                          : item.id == 2
-                          ? item.itemPrice2
-                          : item.id == 3
-                          ? item.itemPrice3
-                          : item.id == 4
-                          ? item.itemPrice4
-                          : item.id == 5
-                          ? item.itemPrice5
-                          : "250"
-                      }
-                      orderOverallPrice={
-                        item.id == 1
-                          ? item.itemTotal1
-                          : item.id == 2
-                          ? item.itemTotal2
-                          : item.id == 3
-                          ? item.itemTotal3
-                          : item.id == 4
-                          ? item.itemTotal4
-                          : item.id == 5
-                          ? item.itemTotal5
-                          : "500"
-                      }
-                    />
-                  ))}
+                {item && item.AllItem
+                  ? item.AllItem.map((item: any) => (
+                      <Orderr
+                        key={item.id}
+                        orderAmount={
+                          item.id == 1
+                            ? item.itemHow1
+                            : item.id == 2
+                            ? item.itemHow2
+                            : item.id == 3
+                            ? item.itemHow3
+                            : item.id == 4
+                            ? item.itemHow4
+                            : item.id == 5
+                            ? item.itemHow5
+                            : "2"
+                        }
+                        OrderText={
+                          item.id == 1
+                            ? item.itemNamee1
+                            : item.id == 2
+                            ? item.itemNamee2
+                            : item.id == 3
+                            ? item.itemNamee3
+                            : item.id == 4
+                            ? item.itemNamee4
+                            : item.id == 5
+                            ? item.itemNamee5
+                            : " Banner Dsign"
+                        }
+                        orderPrice={
+                          item.id == 1
+                            ? item.itemPrice1
+                            : item.id == 2
+                            ? item.itemPrice2
+                            : item.id == 3
+                            ? item.itemPrice3
+                            : item.id == 4
+                            ? item.itemPrice4
+                            : item.id == 5
+                            ? item.itemPrice5
+                            : "250"
+                        }
+                        orderOverallPrice={
+                          item.id == 1
+                            ? item.itemTotal1
+                            : item.id == 2
+                            ? item.itemTotal2
+                            : item.id == 3
+                            ? item.itemTotal3
+                            : item.id == 4
+                            ? item.itemTotal4
+                            : item.id == 5
+                            ? item.itemTotal5
+                            : "500"
+                        }
+                      />
+                    ))
+                  : ""}
               </div>
               <div className="flex w-full justify-between dark:bg-[#0C0E16] bg-[#373B53] rounded-b-lg py-6 px-10">
                 <span className="font-[500] text-[13px] leading-[18px] tracking-[-0.1px] text-[#FFFFFF] ">
