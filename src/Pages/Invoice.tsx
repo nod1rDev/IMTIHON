@@ -73,7 +73,7 @@ function Invoice() {
         ""
       )}
 
-      <div className="pt-[18vh] md:hidden px-6 min-h-[100vh] bg-[#F8F8FB] dark:bg-[#141625]  ">
+      <div className="pt-[18vh] transition-all md:hidden px-6 min-h-[100vh] bg-[#F8F8FB] dark:bg-[#141625]  ">
         <button
           onClick={() => navigate(-1)}
           className="flex gap-6 mb-10 items-center text-[15px] leading-[15px] tracking-[-0.25px] font-bold"

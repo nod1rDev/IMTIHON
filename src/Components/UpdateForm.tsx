@@ -294,7 +294,7 @@ export default function UpdateForm() {
         id="updateModal"
         className="modal  backdrop:z-10  lg:backdrop:mt-0   md:backdrop:mt-[80px] lg:backdrop:ml-[103px]    bg-inherit"
       >
-        <div className="modal-box px-0 py-0 bg-[#FFFFFF]  overflow-y-auto md:px-[20px]   min-w-full absolute  lg:px-[30px] left-0  z-10 lg:top-0 rounded-none  md:min-w-[80%] lg:min-w-[616px] min-h-full rounded-tl-[-50px]    lg:left-[103px] md:left-0 md:top-[80px] dark:bg-[#141625]">
+        <div className="modal-box px-0 py-0 bg-[#FFFFFF]  md:overflow-y-scroll md:px-[20px]   min-w-full absolute  lg:px-[30px] left-0  z-10 lg:top-0 rounded-none  md:min-w-[80%] lg:min-w-[616px] min-h-full rounded-tl-[-50px]    lg:left-[103px] md:left-0 md:top-[80px] dark:bg-[#141625]">
           <div className="flex flex-col pt-6 px-4">
             <button
               onClick={() => updateClose()}

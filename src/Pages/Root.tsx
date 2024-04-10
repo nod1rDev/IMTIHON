@@ -5,11 +5,13 @@ import UpdateForm from "../Components/UpdateForm";
 
 function Root() {
   return (
-    <div className=" relative ">
+    <div className=" relative transition-all ">
       <Control />
-      <FormList />
+      <FormList /> 
       <UpdateForm />
-      <Outlet />
+      <div className=" md:overflow-y-scroll  md:overflow-x-hidden md:h-[694px]">
+        <Outlet />
+      </div>
     </div>
   );
 }
